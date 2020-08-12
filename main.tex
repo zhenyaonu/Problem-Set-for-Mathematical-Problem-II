@@ -1740,13 +1740,13 @@ $P'(z)=na_0 z^{n-1} + (n-1)a_1 z^{n-2} + \ldots + a_1$.
 \begin{problem}
 Let $f:\mathbb{R}\to\mathbb{R}$ be $C^1$ and let
 \begin{eqnarray*}
-u & = & f(x) \\
+u & = & f(x), \\
 v & = & -y+xf(x).
 \end{eqnarray*}
 If $f'(x_0)\neq 0$, show that this transformation is locally
 invertible near $(x_0,y_0)$ and the inverse has the form
 \begin{eqnarray*}
-x & = & g(u) \\
+x & = & g(u), \\
 y & = & -v+ug(u).
 \end{eqnarray*}
 \end{problem}
@@ -1796,14 +1796,14 @@ $(0,0,0)$.
 
 \medskip
 
-\begin{problem}
+\begin{problem}\label{problem_64}
 Let $F(x,y)=x^3y^2+3x^2y^3-xy+2x-y^2+1$, $(x,y)\in\mathbb{R}^2$. Prove that there exist functions $g,h\in C^\infty$ defined on an open neighborhood
 $U\subset\mathbb{R}$ of $0$, such that $F(x,g(x))=0=F(x,h(x))$ and $g(x)<h(x)$ for every $x\in U$. Find $g'(0)$, $h'(0)$.
 \end{problem}
 \begin{proof}
-Suppose $F(0,y_0) = 0$, then we have $y_0 = -1$ or $y_0 = 1$. Also, we have $F_y(0,y) = -2y$, then $F_y(0,1) \neq 0$ and $F_y(0,-1) \neq 0$. With implicit function theorem, there exists a neighborhood $U$ of $0$ and a neighborhood $V$ of $y_0$ such that for every $x\in U$, there is exactly one $y\in V$ satisfying $F(x, f(x)) = 0$. 
+Suppose $F(0,y_0) = 0$, then we have $y_0 = -1$ or $y_0 = 1$. Also, we have $F_y(0,y) = -2y$, then $F_y(0,1) \neq 0$ and $F_y(0,-1) \neq 0$. By the implicit function theorem, there exists a neighborhood $U$ of $0$ and a neighborhood $V$ of $y_0$ such that for every $x\in U$, there is exactly one $y\in V$ satisfying $F(x, f(x)) = 0$. 
 
-For $y_0 = -1$, we have $F(x, g(x)) = 0$, where $g:U \to V_1$ and $V_1$ is a neighborhood of $-1$. Also, for $y_0 = 1$, we have $F(x, h(x)) = 0$, where $h:U \to V_2$ and $V_2$ is a neighborhood of $1$. And $V_1 \cap V_2 = \varnothing$, since if it is not, it contradicts with there is only one $y$ such that $F(x,y) = 0$. Then we have $g(x) < h(x)$. 
+For $y_0 = -1$, we have $F(x, g(x)) = 0$, where $g:U_1 \to V_1$ and $V_1$ is a neighborhood of $y_0 = -1$. Also, for $y_0 = 1$, we have $F(x, h(x)) = 0$, where $h:U_2 \to V_2$ and $V_2$ is a neighborhood of $y_0 = 1$. Let $U = U_1 \cap U_2$, then for $x \in U$, we have $g(x) < h(x)$. 
 
 Also, consider $F(x, g(x)) = 0$, we have $F_x(0,g(0)) = - g(0) + 2 - 2g(0) g'(0) = 0$, with $g(0) = -1$ we have $g'(0) = -\frac{3}{2}$. Similarly, we have $h'(0) = \frac{1}{2}$.
 \end{proof}
@@ -1811,9 +1811,7 @@ Also, consider $F(x, g(x)) = 0$, we have $F_x(0,g(0)) = - g(0) + 2 - 2g(0) g'(0)
 \medskip
 
 \begin{problem}
-Let $F$ be as in Problem~64. Prove that there is a function $g\in C^\infty$
-defined on an open neighborhood $U$ of $0$ such that $F(g(y),y)=0$
-for every $y\in U$. Find $g'(0)$.
+Let $F$ be as in Problem \ref{problem_64}. Prove that there is a function $g\in C^\infty$ defined on an open neighborhood $U$ of $0$ such that $F(g(y),y) = 0$ for every $y \in U$. Find $g'(0)$.
 \end{problem}
 \begin{proof}
 Suppose $F(x_0, 0) = 0$, then we have $x_0 = -\frac{1}{2}$. Also, we have $F_x(x_0, 0) = 3 \neq 0$. With implicit function theorem, there exists a neighborhood $V$ of $0$ and a neighborhood $U$ of $x_0$ such that for every $y\in V$, there is exactly one $x\in U$ satisfying $F(g(y), y) = 0$.
@@ -1868,7 +1866,7 @@ For $(x_0, y_0) \in S$, then $F(x_0, y_0) = 0$ and $F_y(x_0, y_0) \neq 0$. Then 
 
 \begin{problem}
 Prove that the equation $xe^z=y(z+x)$ defines $z$ as a function of $(x,y)$ in a neighborhood of the point
-$(x_0,y_0,z_0)=(2,1,0)$. Then find the Taylr polynomial
+$(x_0,y_0,z_0)=(2,1,0)$. Then find the Taylor polynomial
 of degree $2$ of the function $z=z(x,y)$ centered at the point
 $(2,1)$.
 \end{problem}
@@ -1937,27 +1935,19 @@ Then the angle at which the curve intersects with itself is $\theta = 0$.
 \medskip
 
 
-\noindent
-{\bf Problem 72.}
+\begin{problem}
 Suppose $f:\mathbb{R}^2_+\to\mathbb{R}$ is a continuous function defined on
-$$
-\mathbb{R}^2_+=\{(x,y):\, x\in\mathbb{R},\ y>0\}.
-$$
+$$\mathbb{R}^2_+=\{(x,y):\, x\in\mathbb{R},\ y>0\}.$$
 Assume also that the limits
-$$
-g(u,v)=\lim_{t\to 0}\frac{f((u+t)\cos v,(u+t)\sin v)-f(u\cos v,u\sin v)}{t},
-$$
+$$g(u,v)=\lim_{t\to 0}\frac{f((u+t)\cos v,(u+t)\sin v)-f(u\cos v,u\sin v)}{t},$$
 and
-$$
-h(u,v)=\lim_{t\to 0}\frac{f(u\cos (v+t)),u\sin (v+t))-f(u\cos v,u\sin v)}{t},
-$$
+$$h(u,v)=\lim_{t\to 0}\frac{f(u\cos (v+t)),u\sin (v+t))-f(u\cos v,u\sin v)}{t},$$
 exist and define continuous functions $g,h$ on the domain
-$$
-D=\{(u,v):\, u>0,\ 0<v<\pi\}.
-$$
+$$D=\{(u,v):\, u>0,\ 0<v<\pi\}.$$
 Prove that the function $f$ is differentiable on $\mathbb{R}^2_+$.
+\end{problem}
 \begin{proof}
-Let $\Phi: D \to \mathbb{R}^2_+$ defined as $\Phi(u,v) = (u \cos v, u \sin v)$ is diffeomorphism, since $D\Phi(u,v) = \begin{bmatrix} \cos v & -u \sin v \\ \sin v & u \cos v \end{bmatrix} = u > 0$. Also,
+Let $\Phi: D \to \mathbb{R}^2_+$ defined as $\Phi(u,v) = (u \cos v, u \sin v)$ is diffeomorphism, since $J\Phi(u,v) = \begin{bmatrix} \cos v & -u \sin v \\ \sin v & u \cos v \end{bmatrix} = u > 0$. Also,
 \begin{align*}
     g(u,v) = \frac{\partial (f \circ \Phi)}{\partial u}, \quad h(u,v) = \frac{\partial (f \circ \Phi)}{\partial v}
 \end{align*}
@@ -1967,8 +1957,7 @@ and partial derivatives of $f \circ \Phi$ are continuous, and then $f \circ \Phi
 
 \medskip
 
-\noindent
-{\bf Problem 73.}
+\begin{problem}
 Let $f\in C^1(\mathbb{R})$ be a continuously differentiable function such that $|f'(x)|\leq 1/2$ for all $x\in\mathbb{R}$. Define
 $g:\mathbb{R}^2\to\mathbb{R}^2$ by
 $$
@@ -1982,7 +1971,8 @@ Prove that
 	
 	\item the area $|g([0,1]^2)|$ of the image of the unit square belongs to the interval $[3/4,5/4]$.
 \end{enumerate}
-\noindent{\bf Hint:} {\em Among other tools use the contraction principle.}
+{\em Hint:} Among other tools use the contraction principle.
+\end{problem}
 \begin{proof}
 ~\begin{enumerate}[label=(\alph*)]
     \item For part (a) and (b), it suffices to show that $\det Dg > 0$ on $\mathbb{R}^2$ and for every $(x_0, y_0)$, there is a unique $(x,y)$ such that $g(x,y) = (x_0, y_0)$. We have
@@ -2021,11 +2011,9 @@ Prove that
 
 \medskip
 
-
-\noindent
-{\bf Problem 74.}
-Prove that the tangent planes to the surface $S$ defined by $x^2+y^2-z^2=1$ at the points
-$(x,y,0)\in S$ are parallel to the $z$-axis.
+\begin{problem}
+Prove that the tangent planes to the surface $S$ defined by $x^2 + y^2 - z^ = 1$ at the points $(x,y,0) \in S$ are parallel to the $z$-axis.
+\end{problem}
 \begin{proof}
 The gradient vector of $S$ at point $(x,y,0)$ is $(2x, 2y, -2z)|_{z=0} = (2x,2y,0)$. And this vector is certainly orthogonal to the tangent planes to $S$ at $(x,y,0)$, and also it is orthogonal to $z$-axis. Thus, these tangent planes are parallel to the $z$-axis.
 \end{proof}
@@ -2034,8 +2022,7 @@ The gradient vector of $S$ at point $(x,y,0)$ is $(2x, 2y, -2z)|_{z=0} = (2x,2y,
 \medskip
 
 
-\noindent
-{\bf Problem 75.}
+\begin{problem}
 Prove that the stereographic projection $\pi_N$ from the north pole satisfies
 \begin{enumerate}
 	\item[(a)]
@@ -2049,6 +2036,7 @@ Prove that the stereographic projection $\pi_N$ from the north pole satisfies
 	\item[(c)]
 	$\pi_N^{-1}:\mathbb{R}^2\to S^2\setminus\{ N\}$ is a regular parametrization, that it is an immersion and a homeomorphism.
 \end{enumerate}
+\end{problem}
 \begin{proof}
 ~\begin{figure}[H]
     \centering
@@ -2098,15 +2086,15 @@ Prove that the stereographic projection $\pi_N$ from the north pole satisfies
 
 \medskip
 
-\noindent
-{\bf Problem 76.}
-Prove that the tangent space to $O(3)$ at the identity matrix $I\in O(3)$
-has the following description:
-$$
-T_I O(3)=\{A\in \mathbb{R}^{3\times 3}:\, A+A^T=0\}.
-$$
+\begin{problem}
+Prove that the tangent space\footnote{Suppose $G$ is a subspace of $GL(n, \mathbb{R})$; that is, $G$ is a group of $n \times n$ matrices. The {\em tangent space at the identity} of $G$ is the set of all matrices having the form $f'(0)$, for some function $f: \mathbb{R} \to G$, which is differentiable at $t = 0$ and satisfies $f(0) = I_n$. Definition source: \url{https://www.mtholyoke.edu/courses/hpollats/M319ps6_07.pdf}.} to $O(3)$ at the identity matrix $I \in O(3)$ has the following description:
+$$T_I O(3)=\{A\in \mathbb{R}^{3\times 3}:\, A+A^T=0\}.$$
+\end{problem}
 \begin{proof}
-	WRITE YOUR SOLUTION HERE.
+If $A \in T_I O(n)$, then there is a path $B(t)$ in orthogonal group $O(n)$ with $B(0) = I$ and $DB(0) = A$, where $B^T(t)B(t) = I$\cite{3}. Taking derivative on both sides with respect to $t$ gives 
+\begin{align*}
+    0 = DB(0)^T \cdot I + I \cdot DB(0) = A^T + A.
+\end{align*}
 \end{proof}
 
 
@@ -2122,7 +2110,7 @@ $$
 $$
 
 \begin{proof}
-WRITE YOUR SOLUTION HERE.
+
 \end{proof}
 
 
@@ -2154,7 +2142,7 @@ Prove that the standard ternary Cantor set has measure zero.
 Prove that if $f:[0,1]\to [0,1]$ is a continuous function then its graph as
 a subset of $\mathbb{R}^2$ has measure zero.
 \begin{proof}
-Since $f$ is continuous on a compact set, then $f$ is uniformly continuous, i.e., for any $\varepsilon > 0$, there exists $\delta > 0$, such that if $|x - y| < \delta$, then $|f(x) - f(y)| \leq \varepsilon/2$. Now let $\delta = 1/n$ for some $n$ such that above condition holds. Denote the set $\left[f\left(\frac{k}{n}\right), f\left(\frac{k+1}{n}\right)\right] \times \left[f\left(\frac{k}{n}\right) - \frac{\varepsilon}{2}, f\left(\frac{k}{n}\right) + \frac{\varepsilon}{2}\right]$ by $P_k, k = 0,1,\cdots,n-1$\, then the volume $|P_k| = \frac{\varepsilon}{n}$. Then, the graph $G_f$ of $f$ satisfies $G_f \subset \bigcup^n_{k=1} P_k$ and then 
+Since $f$ is continuous on a compact set, then $f$ is uniformly continuous, i.e., for any $\varepsilon > 0$, there exists $\delta > 0$, such that if $|x - y| < \delta$, then $|f(x) - f(y)| \leq \varepsilon/2$. Now let $\delta = 1/n$ for some $n$ such that above condition holds. Denote the set $\left[f\left(k/n\right), f\left((k+1)/n\right)\right] \times \left[f\left(k/n\right) - \frac{\varepsilon}{2}, f\left(k/n\right) + \frac{\varepsilon}{2}\right]$ by $P_k, k = 0,1,\cdots,n-1$\, then the volume $|P_k| = \frac{\varepsilon}{n}$. Then, the graph $G_f$ of $f$ satisfies $G_f \subset \bigcup^n_{k=1} P_k$ and then 
 \begin{align*}
     |G_f| = \sum^n_{i=1} |P_k| = n \frac{\varepsilon}{n} = \varepsilon \to 0.
 \end{align*}
